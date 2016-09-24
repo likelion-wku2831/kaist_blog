@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root 'blog/index'
   get 'blog/index'
   get 'blog/show/:id', to: 'blog#show'
   get 'blog/new'
