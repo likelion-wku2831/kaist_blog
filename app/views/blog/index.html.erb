@@ -1,0 +1,38 @@
+  <div class="row blog-wrapper">
+    <div class="col-sm-8 blog-main">
+      <div class="blog-post">
+        <% @posts.each do |post| %>
+          <h2 class="blog-post-title">
+            <a href = "/blog/show/<%= post.id %>" >
+              <%= post.title %>
+            </a>
+          </h2>
+          <ul class="list-inline blog-post-meta">
+            <li><%= time_ago_in_words(post.created_at) %></li>
+          </ul>
+          <% end %>
+        </div><!-- /.blog-post -->
+
+    <nav>
+      <ul class="pager">
+      </ul>
+    </nav>
+
+  </div><!-- /.blog-main -->
+
+  <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    <div class="sidebar-module sidebar-module-inset">
+      <h4>About</h4>
+      <p>최규진<br><em>멋쟁이 사자처럼 4기 원광대</em>Stufit 기획<br>Nodabs 개발 및 기획<br>정보통신 공학<br>컴퓨터 공학</p>
+    </div>
+    <div class="sidebar-module">
+      <h4>SNS</h4>
+      <ol class="list-unstyled">
+        <li><a href="https://github.com/likelion-wku2831">GitHub</a></li>
+        <li><a href="https://www.stufit.co.kr">Stufit</a></li>
+        <li><a href="https://fb.com/musiclace@naver.com">Facebook</a></li>
+      </ol>
+    </div>
+  </div><!-- /.blog-sidebar -->
+
+</div><!-- /.row -->

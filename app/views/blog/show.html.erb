@@ -1,0 +1,21 @@
+<div class="row blog-wrapper">
+  <div class="col-sm-8">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><%= @post.title %></h2>
+      <ul class="list-inline blog-post-meta">
+        <li><%= @post.created_at %></li>
+        <li><a href="/blog/edit/<%= @post.id%>">수정</a></li>
+        <li><%= link_to '삭제', '/blog/destroy/' + @post.id.to_s, method: "post" %></li>
+      </ul>
+      <p class = 'blog-content'>
+        <%= @post.content %>
+      </p>
+      </div>
+    </div><!-- /.blog-post -->
+    <nav>
+      <ul class="pager">
+      </ul>
+    </nav>
+
+  </div><!-- /.blog-main -->
+</div><!-- /.row -->
